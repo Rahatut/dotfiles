@@ -1,0 +1,81 @@
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 17px;
+    color: #cdd6f4;
+}
+
+/* Main window */
+window {
+    background-color: #1e1e2e;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+/* Input box */
+#input {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+/* Entries */
+#entry {
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* Hover */
+#entry:hover {
+    background-color: rgba(166, 227, 161, 0.10);
+}
+
+/* Selected entry container */
+#entry:selected {
+    background-color: #181825; /* darker than window */
+}
+
+/* Selected text (THIS is the important part) */
+#entry:selected label {
+    color: #a6e3a1;
+    font-weight: bold;
+}
+
+/* Optional: keep other text dimmer when not selected */
+#entry label {
+    color: #cdd6f4;
+}
+
+/* Remove icon spacing/effects */
+#entry image {
+    display: none;
+}
+
+/* Kill GTK focus outline */
+#entry {
+    outline: none;
+    border: none;
+}
+
+/* Remove focus ring completely */
+#entry:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* Selected state clean styling */
+#entry:selected {
+    background-color: #181825;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Important: remove focus ring from text too */
+#entry:selected label {
+    color: #a6e3a1;
+    outline: none;
+    box-shadow: none;
+}

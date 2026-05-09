@@ -1,0 +1,142 @@
+@import "mocha.css";
+
+/* -------------------------
+   GLOBAL STYLE
+--------------------------*/
+* {
+    font-family: "JetBrains Mono Nerd Font", "Noto Color Emoji", sans-serif;
+    font-size: 13px;
+    color: #cad3f5;
+}
+
+/* -------------------------
+   BAR BACKGROUND
+--------------------------*/
+window#waybar {
+    background: #1e1e2e;
+    border-radius: 16px;
+    margin: 8px 14px;
+    padding: 12px 18px 14px;
+    min-height: 52px;
+    border: 1px solid #313244;
+    box-shadow: none;
+}
+
+/* -------------------------
+   COMMON MODULE SURFACE
+--------------------------*/
+#workspaces,
+#clock,
+#network,
+#pulseaudio,
+#battery,
+#backlight {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    margin: 0 8px 0;
+    padding: 0 2px;
+    transition: color 180ms ease;
+}
+
+/* -------------------------
+   LAYOUT
+--------------------------*/
+#workspaces {
+    padding: 0 2px;
+    margin-top: 0;
+}
+
+#clock,
+#network,
+#pulseaudio,
+#battery,
+#backlight {
+    min-height: 26px;
+    margin-top: 0;
+}
+
+/* -------------------------
+   WORKSPACES
+--------------------------*/
+#workspaces button {
+    min-width: 28px;
+    padding: 0 6px;
+    margin: 0 1px;
+    border-radius: 0;
+    color: #cad3f5;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    transition: color 180ms ease, opacity 180ms ease;
+}
+
+#workspaces button.active {
+    color: #a6e3a1;
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    color: #a6e3a1;
+}
+
+#workspaces button.urgent {
+    color: #f38ba8;
+}
+
+/* -------------------------
+   MODULE HIERARCHY
+--------------------------*/
+#clock {
+    color: #a6e3a1;
+    font-weight: 600;
+}
+
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#backlight {
+    box-shadow: none;
+}
+
+#pulseaudio,
+#network,
+#battery,
+#backlight {
+    color: #cdd6f4;
+}
+
+/* -------------------------
+   STATES
+--------------------------*/
+#battery.critical {
+    color: #f38ba8;
+    background: #3c2f3c;
+    border-color: #f38ba8;
+}
+
+#network.disconnected {
+    color: #f38ba8;
+    border-color: #f38ba8;
+}
+
+/* -------------------------
+   HOVER EFFECTS
+--------------------------*/
+#clock:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#backlight:hover {
+    color: #a6e3a1;
+}
+
+#workspaces button:focus,
+#clock:focus,
+#network:focus,
+#pulseaudio:focus,
+#battery:focus,
+#backlight:focus {
+    outline: none;
+}
