@@ -4,11 +4,11 @@
   "height": 34,
   "spacing": 10,
 
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": ["niri/workspaces"],
   "modules-center": ["clock"],
   "modules-right": ["backlight", "pulseaudio", "network", "battery"],
 
-  "hyprland/workspaces": {
+  "niri/workspaces": {
     "format": "{icon}",
     "on-click": "activate",
     "format-icons": {

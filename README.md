@@ -1,12 +1,12 @@
 # My Arch setup Dotfiles
 
-These are my personal config files for a minimal Hyprland rice built around the Catppuccin Mocha palette with soft green aesthetic.
+These are my personal config files for a minimal Niri setup built around the Catppuccin Mocha palette with soft green aesthetic.
 
 ---
 
 ## Environment
 
-* Window Manager: Hyprland
+* Window Manager: Niri
 * Terminal: Kitty
 * Shell: Zsh
 * Bar: Waybar
@@ -15,6 +15,7 @@ These are my personal config files for a minimal Hyprland rice built around the 
 * Logout Menu: Wlogout
 * Lockscreen: Hyprlock
 * Display Manager: SDDM (Sugar Candy Theme)
+* Session entry: Niri (`niri-session`)
 * File Manager: Thunar
 * Fetch Tool: Fastfetch
 
@@ -91,7 +92,10 @@ Clone the repo:
 git clone <your-repo-url> ~/dotfiles
 ```
 
-Copy configs into `~/.config`.
+Copy the compositor and app configs into `~/.config`.
+Install the Niri session entry to your Wayland sessions directory so SDDM can show it.
+
+To install the session entry, run `./scripts/install-niri-session.sh` from this repo root.
 
 ---
 

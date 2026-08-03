@@ -1,0 +1,35 @@
+input {
+    keyboard {
+        xkb {
+            layout "us"
+        }
+    }
+}
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+
+spawn-at-startup "waybar"
+spawn-at-startup "nm-applet"
+spawn-at-startup "swaybg" "-i" "/home/rahatut/Pictures/Wallpapers/wallpaper.png" "-m" "fill"
+spawn-at-startup "mako"
+
+binds {
+    Mod+T { spawn "kitty"; }
+    Mod+D { spawn "wofi" "--show" "drun"; }
+    Mod+Q { close-window; }
+    Mod+M { quit skip-confirmation=true; }
+    Mod+B { spawn "firefox"; }
+    Mod+L { spawn "/home/rahatut/.local/bin/lock-screen"; }
+
+    Print { screenshot show-pointer=false; }
+
+    Mod+Left { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up { focus-window-up; }
+    Mod+Down { focus-window-down; }
+
+    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Mod+WheelScrollUp cooldown-ms=150 { focus-workspace-up; }
+}

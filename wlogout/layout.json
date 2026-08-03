@@ -1,12 +1,12 @@
 [
   {
     "label" : "lock",
-    "action" : "/usr/bin/hyprlock"
+    "action" : "/home/rahatut/.local/bin/lock-screen"
   },
 
   {
     "label" : "logout",
-    "action" : "/usr/bin/hyprctl dispatch exit"
+    "action" : "/usr/bin/niri msg action quit --skip-confirmation"
   },
 
   {
